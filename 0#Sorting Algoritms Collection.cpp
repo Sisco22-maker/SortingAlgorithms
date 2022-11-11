@@ -144,17 +144,15 @@ void Swap(int *a, int *b) {
   *b = t;
 }
 
-// function to rearrange array (find the partition point)
+
 int MakingPartion(int arr[], int low, int high) {
 
-  // select the rightmost element as pivot
+
   int pivot = arr[high];
 
-  // pointer for greater element
   int i = (low - 1);
 
-  // traverse each element of the array
-  // compare them with the pivot
+
   for (int j = low; j < high; j++) {
     if (arr[j] <= pivot) {
 
@@ -177,9 +175,7 @@ int MakingPartion(int arr[], int low, int high) {
 void quickSort(int arr[], int low, int high) {
   if (low < high) {
 
-    // find the pivot element such that
-    // elements smaller than pivot are on left of pivot
-    // elements greater than pivot are on righ of pivot
+
     int pi = MakingPartion(arr, low, high);
 
     // recursive call on the left of pivot
